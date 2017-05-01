@@ -7,5 +7,3 @@
 //
 
 import Foundation
-
-print("World".pluralize())

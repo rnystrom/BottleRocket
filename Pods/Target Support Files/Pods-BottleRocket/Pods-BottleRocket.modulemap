@@ -1,0 +1,6 @@
+framework module Pods_BottleRocket {
+  umbrella header "Pods-BottleRocket-umbrella.h"
+
+  export *
+  module * { export * }
+}
