@@ -8,7 +8,7 @@
 
 import XCTest
 
-class typeNameTests: XCTestCase {
+class TypeNameTests: XCTestCase {
 
     func test_whenKeyPlural_thatReturnsSingular() {
         let result = typeName(for: "users")

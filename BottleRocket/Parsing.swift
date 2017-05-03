@@ -8,6 +8,18 @@
 
 import Foundation
 
+func parseNodeObject(key: String, dict: [String: Any]) -> Node {
+    var properties = [Node]()
+    for (key, value) in dict {
+        properties.append(parseNode(key: key, value: value))
+    }
+    return .object(
+        key: key,
+        type: typeName(for: key),
+        properties: properties
+    )
+}
+
 func parseNode(key: String, value: Any) -> Node {
     switch value {
     case _ as Bool: return .scalar(key: key, type: "Bool", encodeType: "Bool")
