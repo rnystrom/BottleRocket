@@ -65,9 +65,9 @@ final class Northstar: NSCoding {
         guard let objects = aDecoder.decodeObject(forKey: Keys.objects) as? [MyObject] else { return nil }
 
         let count = aDecoder.decodeInteger(forKey: Keys.count)
-
         self.init(
             name: name,
+
             objects: objects,
             count: count
         )

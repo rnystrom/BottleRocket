@@ -10,7 +10,15 @@ import Foundation
 
 public indirect enum Node {
 
-    case scalar(key: String, type: String, encodeType: String)
+    public enum EncodeType: String {
+        case object = "Object"
+        case string = "String"
+        case integer = "Integer"
+        case double = "Double"
+        case bool = "Bool"
+    }
+
+    case scalar(key: String, type: String, encodeType: EncodeType)
     case object(key: String, type: String, properties: [Node])
     case array(key: String, node: Node)
     case unknown
@@ -28,8 +36,16 @@ public indirect enum Node {
         switch self {
         case .scalar(_, let type, _): return type
         case .object(_, let type, _): return type
-        case .array(_, let obj): return obj.type
+        case .array(_, let obj): return "[\(obj.type)]"
         case .unknown: return ""
         }
     }
+
+    var encodeType: EncodeType {
+        switch self {
+        case .scalar(_, _, let encodeType): return encodeType
+        default: return .object
+        }
+    }
+    
 }
