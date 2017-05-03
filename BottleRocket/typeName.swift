@@ -1,5 +1,5 @@
 //
-//  Keyname.swift
+//  singular.swift
 //  BottleRocket
 //
 //  Created by Ryan Nystrom on 5/1/17.
@@ -9,6 +9,6 @@
 import Foundation
 import InflectorKit
 
-func modelName(for key: String, locale: Locale = Locale.current) -> String {
+func typeName(for key: String, locale: Locale = Locale.current) -> String {
     return TTTStringInflector.default().singularize(key).capitalized(with: locale)
 }

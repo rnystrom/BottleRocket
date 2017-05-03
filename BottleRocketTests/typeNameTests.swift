@@ -8,15 +8,15 @@
 
 import XCTest
 
-class ModelNameTests: XCTestCase {
+class typeNameTests: XCTestCase {
 
     func test_whenKeyPlural_thatReturnsSingular() {
-        let result = modelName(for: "users")
+        let result = typeName(for: "users")
         XCTAssertEqual(result, "User")
     }
 
     func test_whenKeySingular_thatReturnsSingular() {
-        let result = modelName(for: "user")
+        let result = typeName(for: "user")
         XCTAssertEqual(result, "User")
     }
 
