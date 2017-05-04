@@ -23,13 +23,13 @@ extension Node {
 }
 
 // travels the tree and returns an array of all Node.object types
-func flatten(nodes: [Node]) -> [Node] {
+func allObjects(nodes: [Node]) -> [Node] {
     var flat = [Node]()
     for node in nodes {
         switch node {
         case .object(_, _, let properties):
             flat.append(node)
-            flat += flatten(nodes: properties)
+            flat += allObjects(nodes: properties)
         default: break
         }
     }
@@ -59,4 +59,24 @@ func findOptionalNodes(nodes: [Node]) -> [OptionalNode] {
     return optionalNodes
 }
 
+func buildClassMap(
+    nodes: [Node],
+    classMap: [String: String] = [:]
+    ) -> [String: [OptionalNode]] {
+    let allObjectNodes = allObjects(nodes: nodes)
 
+    var dupeMap = [String: [Node]]()
+    for node in allObjectNodes {
+        let name = classMap[node.type] ?? node.type
+        var dupes = dupeMap[name] ?? [Node]()
+        dupes.append(node)
+        dupeMap[name] = dupes
+    }
+
+    var result = [String: [OptionalNode]]()
+    for (key, nodes) in dupeMap {
+        result[key] = findOptionalNodes(nodes: nodes)
+    }
+
+    return result
+}
