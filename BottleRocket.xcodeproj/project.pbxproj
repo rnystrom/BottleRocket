@@ -53,25 +53,6 @@
 		29FB39891EBB7F550059FD11 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39881EBB7F550059FD11 /* Config.swift */; };
 		29FB398B1EBB7F580059FD11 /* ConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB398A1EBB7F580059FD11 /* ConfigTests.swift */; };
 		29FB398C1EBB80790059FD11 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39881EBB7F550059FD11 /* Config.swift */; };
-		29FB3BCE1EBBB93F0059FD11 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BBB1EBBB93F0059FD11 /* Branch.swift */; };
-		29FB3BCF1EBBB93F0059FD11 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BBC1EBBB93F0059FD11 /* Comment.swift */; };
-		29FB3BD01EBBB93F0059FD11 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BBD1EBBB93F0059FD11 /* Commit.swift */; };
-		29FB3BD11EBBB93F0059FD11 /* Html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BBE1EBBB93F0059FD11 /* Html.swift */; };
-		29FB3BD21EBBB93F0059FD11 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BBF1EBBB93F0059FD11 /* Issue.swift */; };
-		29FB3BD31EBBB93F0059FD11 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC01EBBB93F0059FD11 /* Label.swift */; };
-		29FB3BD41EBBB93F0059FD11 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC11EBBB93F0059FD11 /* Link.swift */; };
-		29FB3BD51EBBB93F0059FD11 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC21EBBB93F0059FD11 /* Milestone.swift */; };
-		29FB3BD61EBBB93F0059FD11 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC31EBBB93F0059FD11 /* Notification.swift */; };
-		29FB3BD71EBBB93F0059FD11 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC41EBBB93F0059FD11 /* Organization.swift */; };
-		29FB3BD81EBBB93F0059FD11 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC51EBBB93F0059FD11 /* Permission.swift */; };
-		29FB3BD91EBBB93F0059FD11 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC61EBBB93F0059FD11 /* PullRequest.swift */; };
-		29FB3BDA1EBBB93F0059FD11 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC71EBBB93F0059FD11 /* Reaction.swift */; };
-		29FB3BDB1EBBB93F0059FD11 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC81EBBB93F0059FD11 /* Repository.swift */; };
-		29FB3BDC1EBBB93F0059FD11 /* ReviewComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC91EBBB93F0059FD11 /* ReviewComment.swift */; };
-		29FB3BDD1EBBB93F0059FD11 /* Self_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BCA1EBBB93F0059FD11 /* Self_.swift */; };
-		29FB3BDE1EBBB93F0059FD11 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BCB1EBBB93F0059FD11 /* Status.swift */; };
-		29FB3BDF1EBBB93F0059FD11 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BCC1EBBB93F0059FD11 /* Subject.swift */; };
-		29FB3BE01EBBB93F0059FD11 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BCD1EBBB93F0059FD11 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,25 +112,6 @@
 		29FB39841EBAD8240059FD11 /* BottleRocket-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BottleRocket-Bridging-Header.h"; sourceTree = "<group>"; };
 		29FB39881EBB7F550059FD11 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		29FB398A1EBB7F580059FD11 /* ConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigTests.swift; sourceTree = "<group>"; };
-		29FB3BBB1EBBB93F0059FD11 /* Branch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
-		29FB3BBC1EBBB93F0059FD11 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		29FB3BBD1EBBB93F0059FD11 /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
-		29FB3BBE1EBBB93F0059FD11 /* Html.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Html.swift; sourceTree = "<group>"; };
-		29FB3BBF1EBBB93F0059FD11 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
-		29FB3BC01EBBB93F0059FD11 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
-		29FB3BC11EBBB93F0059FD11 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
-		29FB3BC21EBBB93F0059FD11 /* Milestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
-		29FB3BC31EBBB93F0059FD11 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		29FB3BC41EBBB93F0059FD11 /* Organization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
-		29FB3BC51EBBB93F0059FD11 /* Permission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
-		29FB3BC61EBBB93F0059FD11 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
-		29FB3BC71EBBB93F0059FD11 /* Reaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
-		29FB3BC81EBBB93F0059FD11 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		29FB3BC91EBBB93F0059FD11 /* ReviewComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewComment.swift; sourceTree = "<group>"; };
-		29FB3BCA1EBBB93F0059FD11 /* Self_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Self_.swift; sourceTree = "<group>"; };
-		29FB3BCB1EBBB93F0059FD11 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
-		29FB3BCC1EBBB93F0059FD11 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
-		29FB3BCD1EBBB93F0059FD11 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +154,6 @@
 		298870461EB7952B00EDFA03 /* BottleRocket */ = {
 			isa = PBXGroup;
 			children = (
-				29FB3BBA1EBBB93F0059FD11 /* gen */,
 				29FB39881EBB7F550059FD11 /* Config.swift */,
 				29FB39841EBAD8240059FD11 /* BottleRocket-Bridging-Header.h */,
 				29FB394D1EBACC170059FD11 /* Files.swift */,
@@ -260,33 +221,6 @@
 			);
 			path = InflectorKit;
 			sourceTree = "<group>";
-		};
-		29FB3BBA1EBBB93F0059FD11 /* gen */ = {
-			isa = PBXGroup;
-			children = (
-				29FB3BBB1EBBB93F0059FD11 /* Branch.swift */,
-				29FB3BBC1EBBB93F0059FD11 /* Comment.swift */,
-				29FB3BBD1EBBB93F0059FD11 /* Commit.swift */,
-				29FB3BBE1EBBB93F0059FD11 /* Html.swift */,
-				29FB3BBF1EBBB93F0059FD11 /* Issue.swift */,
-				29FB3BC01EBBB93F0059FD11 /* Label.swift */,
-				29FB3BC11EBBB93F0059FD11 /* Link.swift */,
-				29FB3BC21EBBB93F0059FD11 /* Milestone.swift */,
-				29FB3BC31EBBB93F0059FD11 /* Notification.swift */,
-				29FB3BC41EBBB93F0059FD11 /* Organization.swift */,
-				29FB3BC51EBBB93F0059FD11 /* Permission.swift */,
-				29FB3BC61EBBB93F0059FD11 /* PullRequest.swift */,
-				29FB3BC71EBBB93F0059FD11 /* Reaction.swift */,
-				29FB3BC81EBBB93F0059FD11 /* Repository.swift */,
-				29FB3BC91EBBB93F0059FD11 /* ReviewComment.swift */,
-				29FB3BCA1EBBB93F0059FD11 /* Self_.swift */,
-				29FB3BCB1EBBB93F0059FD11 /* Status.swift */,
-				29FB3BCC1EBBB93F0059FD11 /* Subject.swift */,
-				29FB3BCD1EBBB93F0059FD11 /* User.swift */,
-			);
-			name = gen;
-			path = Samples/gen;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -397,10 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29FB3BD11EBBB93F0059FD11 /* Html.swift in Sources */,
 				2988707F1EB7A9F300EDFA03 /* Node.swift in Sources */,
 				298870781EB797E700EDFA03 /* TypeName.swift in Sources */,
-				29FB3BD81EBBB93F0059FD11 /* Permission.swift in Sources */,
 				29FB396B1EBAD1860059FD11 /* CommandMessageGenerator.swift in Sources */,
 				29FB39791EBAD1860059FD11 /* VersionCommand.swift in Sources */,
 				29FB39761EBAD1860059FD11 /* Parameter.swift in Sources */,
@@ -412,36 +344,19 @@
 				29FB396D1EBAD1860059FD11 /* GlobalOptions.swift in Sources */,
 				29FB39691EBAD1860059FD11 /* CLI.swift in Sources */,
 				29FB39741EBAD1860059FD11 /* OptionRegistry.swift in Sources */,
-				29FB3BD31EBBB93F0059FD11 /* Label.swift in Sources */,
 				298870481EB7952B00EDFA03 /* main.swift in Sources */,
-				29FB3BD21EBBB93F0059FD11 /* Issue.swift in Sources */,
 				29FB39781EBAD1860059FD11 /* Router.swift in Sources */,
-				29FB3BDD1EBBB93F0059FD11 /* Self_.swift in Sources */,
-				29FB3BD71EBBB93F0059FD11 /* Organization.swift in Sources */,
 				29FB39721EBAD1860059FD11 /* OptionGroup.swift in Sources */,
 				29FB39681EBAD1860059FD11 /* ChainableCommand.swift in Sources */,
-				29FB3BD61EBBB93F0059FD11 /* Notification.swift in Sources */,
 				29FB39891EBB7F550059FD11 /* Config.swift in Sources */,
 				29FB39731EBAD1860059FD11 /* OptionRecognizer.swift in Sources */,
-				29FB3BD41EBBB93F0059FD11 /* Link.swift in Sources */,
 				29FB39751EBAD1860059FD11 /* Output.swift in Sources */,
-				29FB3BDB1EBBB93F0059FD11 /* Repository.swift in Sources */,
-				29FB3BDE1EBBB93F0059FD11 /* Status.swift in Sources */,
 				29FB39661EBAD1850059FD11 /* ArgumentList.swift in Sources */,
 				29E4400C1EBA215A00248779 /* Rendering.swift in Sources */,
 				29FB39801EBAD79A0059FD11 /* TTTStringInflector.m in Sources */,
-				29FB3BD91EBBB93F0059FD11 /* PullRequest.swift in Sources */,
 				29FB39701EBAD1860059FD11 /* LightweightCommand.swift in Sources */,
-				29FB3BD51EBBB93F0059FD11 /* Milestone.swift in Sources */,
-				29FB3BD01EBBB93F0059FD11 /* Commit.swift in Sources */,
-				29FB3BCE1EBBB93F0059FD11 /* Branch.swift in Sources */,
-				29FB3BDA1EBBB93F0059FD11 /* Reaction.swift in Sources */,
 				29E440151EBA780C00248779 /* Reduce.swift in Sources */,
-				29FB3BDF1EBBB93F0059FD11 /* Subject.swift in Sources */,
-				29FB3BE01EBBB93F0059FD11 /* User.swift in Sources */,
 				29DA08071EB829120098010A /* Parsing.swift in Sources */,
-				29FB3BCF1EBBB93F0059FD11 /* Comment.swift in Sources */,
-				29FB3BDC1EBBB93F0059FD11 /* ReviewComment.swift in Sources */,
 				29FB396F1EBAD1860059FD11 /* Input.swift in Sources */,
 				29FB39771EBAD1860059FD11 /* ParameterFiller.swift in Sources */,
 				29FB396C1EBAD1860059FD11 /* CommandSignature.swift in Sources */,
