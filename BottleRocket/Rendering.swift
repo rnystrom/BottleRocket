@@ -16,6 +16,12 @@ prefix func --> (strs: [String]) -> [String] {
     return strs.map { "  " + $0 }
 }
 
+extension Node {
+    var displayName: String {
+        return cleanKey(for: key)
+    }
+}
+
 func wrapGuard(
     base: String,
     optional: Bool
@@ -91,13 +97,12 @@ func renderParsingArray(name: String, node: Node, optional: Bool) -> [String] {
         return [ renderParsing(name: name, key: name, type: "[\(type)]", optional: optional) ]
     case .object(_, let type, _):
         let jsonName = "\(name)JSON"
-        let collectionName = "\(name)Objects"
         return [
             renderParsing(name: jsonName, key: name, type: "[ [String: Any] ]", optional: optional),
-            "var \(collectionName) = [\(type)]()",
-            "for dict in \(jsonName) {",
+            "var \(name) = [\(type)]()",
+            "for dict in \(jsonName) ?? [] {",
             "  if let object = \(type)(json: dict) {",
-            "    \(collectionName)(object)",
+            "    \(name).append(object)",
             "  }",
             "}"
         ]
@@ -109,7 +114,7 @@ func renderParsingArray(name: String, node: Node, optional: Bool) -> [String] {
 func renderInitCall(
     nodes: [Node]
     ) -> [String] {
-    let params = nodes.map { "\($0.key): \($0.key)" }
+    let params = nodes.map { "\($0.displayName): \($0.displayName)" }
     let paramsWithCommas = appendCommas(lines: params)
     return [ "self.init(" ]
         + -->paramsWithCommas
@@ -123,13 +128,19 @@ func renderDecode(
     optional: Bool
     ) -> String {
     let cast: String
+    let typeOptional: Bool
     switch encodeType {
-    case .object: cast = " as? \(type)"
-    default: cast = ""
+    case .object:
+        cast = " as? \(type)"
+        typeOptional = optional
+    default:
+        cast = ""
+        // removes the guard wrap
+        typeOptional = true
     }
     return wrapGuard(
         base: "let \(name) = aDecoder.decode\(encodeType.rawValue)(forKey: Keys.\(name))\(cast)",
-        optional: optional
+        optional: typeOptional
     )
 }
 
@@ -143,7 +154,14 @@ func renderInitDecode(
     optionalNodes: [OptionalNode]
     ) -> [String] {
     return [ "convenience init?(coder aDecoder: NSCoder) {" ]
-        + -->optionalNodes.map { renderDecode(name: $0.node.key, encodeType: $0.node.encodeType, type: $0.node.type, optional: $0.optional) }
+        + -->optionalNodes.map {
+            renderDecode(
+                name: $0.node.displayName,
+                encodeType: $0.node.encodeType,
+                type: $0.node.type,
+                optional: $0.optional
+            )
+        }
         + -->renderInitCall(nodes: optionalNodes.map { $0.node })
         + [ "}" ]
 }
@@ -152,7 +170,7 @@ func renderEncode(
     nodes: [Node]
     ) -> [String]{
     return [ "func encode(with aCoder: NSCoder) {" ]
-        + -->nodes.map { renderEncode(name: $0.key) }
+        + -->nodes.map { renderEncode(name: $0.displayName) }
         + [ "}" ]
 }
 
@@ -160,27 +178,27 @@ func renderKeys(
     nodes: [Node]
     ) -> [String] {
     return [ "struct Keys {" ]
-        + -->nodes.map { "static let \($0.key) = \"\($0.key)\"" }
+        + -->nodes.map { "static let \($0.displayName) = \"\($0.key)\"" }
         + [ "}" ]
 }
 
 func renderInitializer(
     optionalNodes: [OptionalNode]
     ) -> [String] {
-    let paramLines = optionalNodes.map { "\($0.node.key): \($0.node.type)\($0.optional ? "?" : "")" }
+    let paramLines = optionalNodes.map { "\($0.node.displayName): \($0.node.type)\($0.optional ? "?" : "")" }
     let paramLinesWithComma = appendCommas(lines: paramLines)
 
     return [ "init(" ]
         + -->paramLinesWithComma
         + -->[ ") {" ]
-        + -->optionalNodes.map { "self.\($0.node.key) = \($0.node.key)" }
+        + -->optionalNodes.map { "self.\($0.node.displayName) = \($0.node.displayName)" }
         + [ "}" ]
 }
 
 func renderProperties(
     optionalNodes: [OptionalNode]
     ) -> [String] {
-    return optionalNodes.map { "let \($0.node.key): \($0.node.type)\($0.optional ? "?" : "")" }
+    return optionalNodes.map { "let \($0.node.displayName): \($0.node.type)\($0.optional ? "?" : "")" }
 }
 
 func renderInitJSON(
@@ -189,13 +207,14 @@ func renderInitJSON(
 
     var parsingLines = [String]()
     for pair in optionalNodes {
+        let displayName = pair.node.displayName
         switch pair.node {
-        case .scalar(let key, let type, _):
-            parsingLines += renderParsingScalar(name: key, type: type, optional: pair.optional)
-        case .object(let key, let type, _):
-            parsingLines += renderParsingObject(name: key, type: type, optional: pair.optional)
-        case .array(let key, let node):
-            parsingLines += renderParsingArray(name: key, node: node, optional: pair.optional)
+        case .scalar(_, let type, _):
+            parsingLines += renderParsingScalar(name: displayName, type: type, optional: pair.optional)
+        case .object(_, let type, _):
+            parsingLines += renderParsingObject(name: displayName, type: type, optional: pair.optional)
+        case .array(_, let node):
+            parsingLines += renderParsingArray(name: displayName, node: node, optional: pair.optional)
         default: break
         }
     }

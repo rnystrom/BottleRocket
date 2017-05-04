@@ -25,8 +25,53 @@
 		29E440181EBA790200248779 /* Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E440141EBA780C00248779 /* Reduce.swift */; };
 		29FB394E1EBACC170059FD11 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB394D1EBACC170059FD11 /* Files.swift */; };
 		29FB39501EBACDBE0059FD11 /* FilesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB394F1EBACDBE0059FD11 /* FilesTests.swift */; };
-		775F27C9033CD0F80F4D82AE /* Pods_BottleRocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5C2233CBC33F615D248440 /* Pods_BottleRocketTests.framework */; };
-		BC7DD991B72CAF2098630B31 /* Pods_BottleRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EC4AAC8FB506E1BBCD942A /* Pods_BottleRocket.framework */; };
+		29FB39661EBAD1850059FD11 /* ArgumentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39521EBAD1850059FD11 /* ArgumentList.swift */; };
+		29FB39671EBAD1860059FD11 /* ArgumentListManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39531EBAD1850059FD11 /* ArgumentListManipulator.swift */; };
+		29FB39681EBAD1860059FD11 /* ChainableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39541EBAD1850059FD11 /* ChainableCommand.swift */; };
+		29FB39691EBAD1860059FD11 /* CLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39551EBAD1850059FD11 /* CLI.swift */; };
+		29FB396A1EBAD1860059FD11 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39561EBAD1850059FD11 /* Command.swift */; };
+		29FB396B1EBAD1860059FD11 /* CommandMessageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39571EBAD1850059FD11 /* CommandMessageGenerator.swift */; };
+		29FB396C1EBAD1860059FD11 /* CommandSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39581EBAD1850059FD11 /* CommandSignature.swift */; };
+		29FB396D1EBAD1860059FD11 /* GlobalOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39591EBAD1850059FD11 /* GlobalOptions.swift */; };
+		29FB396E1EBAD1860059FD11 /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB395A1EBAD1850059FD11 /* HelpCommand.swift */; };
+		29FB396F1EBAD1860059FD11 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB395B1EBAD1850059FD11 /* Input.swift */; };
+		29FB39701EBAD1860059FD11 /* LightweightCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB395C1EBAD1850059FD11 /* LightweightCommand.swift */; };
+		29FB39711EBAD1860059FD11 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB395D1EBAD1850059FD11 /* Option.swift */; };
+		29FB39721EBAD1860059FD11 /* OptionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB395E1EBAD1850059FD11 /* OptionGroup.swift */; };
+		29FB39731EBAD1860059FD11 /* OptionRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB395F1EBAD1850059FD11 /* OptionRecognizer.swift */; };
+		29FB39741EBAD1860059FD11 /* OptionRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39601EBAD1850059FD11 /* OptionRegistry.swift */; };
+		29FB39751EBAD1860059FD11 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39611EBAD1850059FD11 /* Output.swift */; };
+		29FB39761EBAD1860059FD11 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39621EBAD1850059FD11 /* Parameter.swift */; };
+		29FB39771EBAD1860059FD11 /* ParameterFiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39631EBAD1850059FD11 /* ParameterFiller.swift */; };
+		29FB39781EBAD1860059FD11 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39641EBAD1850059FD11 /* Router.swift */; };
+		29FB39791EBAD1860059FD11 /* VersionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39651EBAD1850059FD11 /* VersionCommand.swift */; };
+		29FB397F1EBAD79A0059FD11 /* NSString+InflectorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FB397C1EBAD79A0059FD11 /* NSString+InflectorKit.m */; };
+		29FB39801EBAD79A0059FD11 /* TTTStringInflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FB397E1EBAD79A0059FD11 /* TTTStringInflector.m */; };
+		29FB39851EBB717E0059FD11 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB394D1EBACC170059FD11 /* Files.swift */; };
+		29FB39861EBB71CC0059FD11 /* NSString+InflectorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FB397C1EBAD79A0059FD11 /* NSString+InflectorKit.m */; };
+		29FB39871EBB71CC0059FD11 /* TTTStringInflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FB397E1EBAD79A0059FD11 /* TTTStringInflector.m */; };
+		29FB39891EBB7F550059FD11 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39881EBB7F550059FD11 /* Config.swift */; };
+		29FB398B1EBB7F580059FD11 /* ConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB398A1EBB7F580059FD11 /* ConfigTests.swift */; };
+		29FB398C1EBB80790059FD11 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB39881EBB7F550059FD11 /* Config.swift */; };
+		29FB3BCE1EBBB93F0059FD11 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BBB1EBBB93F0059FD11 /* Branch.swift */; };
+		29FB3BCF1EBBB93F0059FD11 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BBC1EBBB93F0059FD11 /* Comment.swift */; };
+		29FB3BD01EBBB93F0059FD11 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BBD1EBBB93F0059FD11 /* Commit.swift */; };
+		29FB3BD11EBBB93F0059FD11 /* Html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BBE1EBBB93F0059FD11 /* Html.swift */; };
+		29FB3BD21EBBB93F0059FD11 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BBF1EBBB93F0059FD11 /* Issue.swift */; };
+		29FB3BD31EBBB93F0059FD11 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC01EBBB93F0059FD11 /* Label.swift */; };
+		29FB3BD41EBBB93F0059FD11 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC11EBBB93F0059FD11 /* Link.swift */; };
+		29FB3BD51EBBB93F0059FD11 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC21EBBB93F0059FD11 /* Milestone.swift */; };
+		29FB3BD61EBBB93F0059FD11 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC31EBBB93F0059FD11 /* Notification.swift */; };
+		29FB3BD71EBBB93F0059FD11 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC41EBBB93F0059FD11 /* Organization.swift */; };
+		29FB3BD81EBBB93F0059FD11 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC51EBBB93F0059FD11 /* Permission.swift */; };
+		29FB3BD91EBBB93F0059FD11 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC61EBBB93F0059FD11 /* PullRequest.swift */; };
+		29FB3BDA1EBBB93F0059FD11 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC71EBBB93F0059FD11 /* Reaction.swift */; };
+		29FB3BDB1EBBB93F0059FD11 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC81EBBB93F0059FD11 /* Repository.swift */; };
+		29FB3BDC1EBBB93F0059FD11 /* ReviewComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BC91EBBB93F0059FD11 /* ReviewComment.swift */; };
+		29FB3BDD1EBBB93F0059FD11 /* Self_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BCA1EBBB93F0059FD11 /* Self_.swift */; };
+		29FB3BDE1EBBB93F0059FD11 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BCB1EBBB93F0059FD11 /* Status.swift */; };
+		29FB3BDF1EBBB93F0059FD11 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BCC1EBBB93F0059FD11 /* Subject.swift */; };
+		29FB3BE01EBBB93F0059FD11 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB3BCD1EBBB93F0059FD11 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,12 +104,52 @@
 		29E440161EBA78F000248779 /* ReduceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduceTests.swift; sourceTree = "<group>"; };
 		29FB394D1EBACC170059FD11 /* Files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		29FB394F1EBACDBE0059FD11 /* FilesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesTests.swift; sourceTree = "<group>"; };
-		2F5C2233CBC33F615D248440 /* Pods_BottleRocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottleRocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D631F7D445745398249670A /* Pods-BottleRocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottleRocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BottleRocket/Pods-BottleRocket.debug.xcconfig"; sourceTree = "<group>"; };
-		56EC4AAC8FB506E1BBCD942A /* Pods_BottleRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottleRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E57222870CCDBADED6FB0AE /* Pods-BottleRocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottleRocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-BottleRocket/Pods-BottleRocket.release.xcconfig"; sourceTree = "<group>"; };
-		CF96E53452C763CAD333D754 /* Pods-BottleRocketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottleRocketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BottleRocketTests/Pods-BottleRocketTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F0F16508FCE6E7F9C0A81276 /* Pods-BottleRocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottleRocketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BottleRocketTests/Pods-BottleRocketTests.release.xcconfig"; sourceTree = "<group>"; };
+		29FB39521EBAD1850059FD11 /* ArgumentList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentList.swift; sourceTree = "<group>"; };
+		29FB39531EBAD1850059FD11 /* ArgumentListManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentListManipulator.swift; sourceTree = "<group>"; };
+		29FB39541EBAD1850059FD11 /* ChainableCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainableCommand.swift; sourceTree = "<group>"; };
+		29FB39551EBAD1850059FD11 /* CLI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLI.swift; sourceTree = "<group>"; };
+		29FB39561EBAD1850059FD11 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		29FB39571EBAD1850059FD11 /* CommandMessageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandMessageGenerator.swift; sourceTree = "<group>"; };
+		29FB39581EBAD1850059FD11 /* CommandSignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandSignature.swift; sourceTree = "<group>"; };
+		29FB39591EBAD1850059FD11 /* GlobalOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalOptions.swift; sourceTree = "<group>"; };
+		29FB395A1EBAD1850059FD11 /* HelpCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
+		29FB395B1EBAD1850059FD11 /* Input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		29FB395C1EBAD1850059FD11 /* LightweightCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightweightCommand.swift; sourceTree = "<group>"; };
+		29FB395D1EBAD1850059FD11 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		29FB395E1EBAD1850059FD11 /* OptionGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionGroup.swift; sourceTree = "<group>"; };
+		29FB395F1EBAD1850059FD11 /* OptionRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionRecognizer.swift; sourceTree = "<group>"; };
+		29FB39601EBAD1850059FD11 /* OptionRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionRegistry.swift; sourceTree = "<group>"; };
+		29FB39611EBAD1850059FD11 /* Output.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
+		29FB39621EBAD1850059FD11 /* Parameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
+		29FB39631EBAD1850059FD11 /* ParameterFiller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterFiller.swift; sourceTree = "<group>"; };
+		29FB39641EBAD1850059FD11 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		29FB39651EBAD1850059FD11 /* VersionCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionCommand.swift; sourceTree = "<group>"; };
+		29FB397B1EBAD79A0059FD11 /* NSString+InflectorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+InflectorKit.h"; sourceTree = "<group>"; };
+		29FB397C1EBAD79A0059FD11 /* NSString+InflectorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+InflectorKit.m"; sourceTree = "<group>"; };
+		29FB397D1EBAD79A0059FD11 /* TTTStringInflector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTStringInflector.h; sourceTree = "<group>"; };
+		29FB397E1EBAD79A0059FD11 /* TTTStringInflector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTStringInflector.m; sourceTree = "<group>"; };
+		29FB39841EBAD8240059FD11 /* BottleRocket-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BottleRocket-Bridging-Header.h"; sourceTree = "<group>"; };
+		29FB39881EBB7F550059FD11 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		29FB398A1EBB7F580059FD11 /* ConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigTests.swift; sourceTree = "<group>"; };
+		29FB3BBB1EBBB93F0059FD11 /* Branch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
+		29FB3BBC1EBBB93F0059FD11 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		29FB3BBD1EBBB93F0059FD11 /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		29FB3BBE1EBBB93F0059FD11 /* Html.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Html.swift; sourceTree = "<group>"; };
+		29FB3BBF1EBBB93F0059FD11 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		29FB3BC01EBBB93F0059FD11 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		29FB3BC11EBBB93F0059FD11 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		29FB3BC21EBBB93F0059FD11 /* Milestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
+		29FB3BC31EBBB93F0059FD11 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		29FB3BC41EBBB93F0059FD11 /* Organization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		29FB3BC51EBBB93F0059FD11 /* Permission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
+		29FB3BC61EBBB93F0059FD11 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
+		29FB3BC71EBBB93F0059FD11 /* Reaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
+		29FB3BC81EBBB93F0059FD11 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		29FB3BC91EBBB93F0059FD11 /* ReviewComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewComment.swift; sourceTree = "<group>"; };
+		29FB3BCA1EBBB93F0059FD11 /* Self_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Self_.swift; sourceTree = "<group>"; };
+		29FB3BCB1EBBB93F0059FD11 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		29FB3BCC1EBBB93F0059FD11 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		29FB3BCD1EBBB93F0059FD11 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +157,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC7DD991B72CAF2098630B31 /* Pods_BottleRocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +164,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				775F27C9033CD0F80F4D82AE /* Pods_BottleRocketTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +177,6 @@
 				298870461EB7952B00EDFA03 /* BottleRocket */,
 				298870701EB797D200EDFA03 /* BottleRocketTests */,
 				298870451EB7952B00EDFA03 /* Products */,
-				91D66251BD6229C5178DF3FD /* Pods */,
-				DFEE545125C58DF6534AE0A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,13 +192,18 @@
 		298870461EB7952B00EDFA03 /* BottleRocket */ = {
 			isa = PBXGroup;
 			children = (
+				29FB3BBA1EBBB93F0059FD11 /* gen */,
+				29FB39881EBB7F550059FD11 /* Config.swift */,
+				29FB39841EBAD8240059FD11 /* BottleRocket-Bridging-Header.h */,
+				29FB394D1EBACC170059FD11 /* Files.swift */,
+				29FB397A1EBAD7990059FD11 /* InflectorKit */,
 				298870471EB7952B00EDFA03 /* main.swift */,
-				298870771EB797E700EDFA03 /* TypeName.swift */,
 				2988707E1EB7A9F300EDFA03 /* Node.swift */,
-				29E4400B1EBA215A00248779 /* Rendering.swift */,
 				29DA08061EB829120098010A /* Parsing.swift */,
 				29E440141EBA780C00248779 /* Reduce.swift */,
-				29FB394D1EBACC170059FD11 /* Files.swift */,
+				29E4400B1EBA215A00248779 /* Rendering.swift */,
+				29FB39511EBAD1850059FD11 /* SwiftCLI */,
+				298870771EB797E700EDFA03 /* TypeName.swift */,
 			);
 			path = BottleRocket;
 			sourceTree = "<group>";
@@ -125,6 +211,7 @@
 		298870701EB797D200EDFA03 /* BottleRocketTests */ = {
 			isa = PBXGroup;
 			children = (
+				29FB398A1EBB7F580059FD11 /* ConfigTests.swift */,
 				298870791EB7A28600EDFA03 /* TypeNameTests.swift */,
 				29DA080A1EB82B640098010A /* ParsingTests.swift */,
 				29E4400E1EBA4E5100248779 /* NodeTests.swift */,
@@ -136,25 +223,70 @@
 			path = BottleRocketTests;
 			sourceTree = "<group>";
 		};
-		91D66251BD6229C5178DF3FD /* Pods */ = {
+		29FB39511EBAD1850059FD11 /* SwiftCLI */ = {
 			isa = PBXGroup;
 			children = (
-				3D631F7D445745398249670A /* Pods-BottleRocket.debug.xcconfig */,
-				5E57222870CCDBADED6FB0AE /* Pods-BottleRocket.release.xcconfig */,
-				CF96E53452C763CAD333D754 /* Pods-BottleRocketTests.debug.xcconfig */,
-				F0F16508FCE6E7F9C0A81276 /* Pods-BottleRocketTests.release.xcconfig */,
+				29FB39521EBAD1850059FD11 /* ArgumentList.swift */,
+				29FB39531EBAD1850059FD11 /* ArgumentListManipulator.swift */,
+				29FB39541EBAD1850059FD11 /* ChainableCommand.swift */,
+				29FB39551EBAD1850059FD11 /* CLI.swift */,
+				29FB39561EBAD1850059FD11 /* Command.swift */,
+				29FB39571EBAD1850059FD11 /* CommandMessageGenerator.swift */,
+				29FB39581EBAD1850059FD11 /* CommandSignature.swift */,
+				29FB39591EBAD1850059FD11 /* GlobalOptions.swift */,
+				29FB395A1EBAD1850059FD11 /* HelpCommand.swift */,
+				29FB395B1EBAD1850059FD11 /* Input.swift */,
+				29FB395C1EBAD1850059FD11 /* LightweightCommand.swift */,
+				29FB395D1EBAD1850059FD11 /* Option.swift */,
+				29FB395E1EBAD1850059FD11 /* OptionGroup.swift */,
+				29FB395F1EBAD1850059FD11 /* OptionRecognizer.swift */,
+				29FB39601EBAD1850059FD11 /* OptionRegistry.swift */,
+				29FB39611EBAD1850059FD11 /* Output.swift */,
+				29FB39621EBAD1850059FD11 /* Parameter.swift */,
+				29FB39631EBAD1850059FD11 /* ParameterFiller.swift */,
+				29FB39641EBAD1850059FD11 /* Router.swift */,
+				29FB39651EBAD1850059FD11 /* VersionCommand.swift */,
 			);
-			name = Pods;
+			path = SwiftCLI;
 			sourceTree = "<group>";
 		};
-		DFEE545125C58DF6534AE0A0 /* Frameworks */ = {
+		29FB397A1EBAD7990059FD11 /* InflectorKit */ = {
 			isa = PBXGroup;
 			children = (
-				56EC4AAC8FB506E1BBCD942A /* Pods_BottleRocket.framework */,
-				2F5C2233CBC33F615D248440 /* Pods_BottleRocketTests.framework */,
+				29FB397B1EBAD79A0059FD11 /* NSString+InflectorKit.h */,
+				29FB397C1EBAD79A0059FD11 /* NSString+InflectorKit.m */,
+				29FB397D1EBAD79A0059FD11 /* TTTStringInflector.h */,
+				29FB397E1EBAD79A0059FD11 /* TTTStringInflector.m */,
 			);
-			name = Frameworks;
+			path = InflectorKit;
 			sourceTree = "<group>";
+		};
+		29FB3BBA1EBBB93F0059FD11 /* gen */ = {
+			isa = PBXGroup;
+			children = (
+				29FB3BBB1EBBB93F0059FD11 /* Branch.swift */,
+				29FB3BBC1EBBB93F0059FD11 /* Comment.swift */,
+				29FB3BBD1EBBB93F0059FD11 /* Commit.swift */,
+				29FB3BBE1EBBB93F0059FD11 /* Html.swift */,
+				29FB3BBF1EBBB93F0059FD11 /* Issue.swift */,
+				29FB3BC01EBBB93F0059FD11 /* Label.swift */,
+				29FB3BC11EBBB93F0059FD11 /* Link.swift */,
+				29FB3BC21EBBB93F0059FD11 /* Milestone.swift */,
+				29FB3BC31EBBB93F0059FD11 /* Notification.swift */,
+				29FB3BC41EBBB93F0059FD11 /* Organization.swift */,
+				29FB3BC51EBBB93F0059FD11 /* Permission.swift */,
+				29FB3BC61EBBB93F0059FD11 /* PullRequest.swift */,
+				29FB3BC71EBBB93F0059FD11 /* Reaction.swift */,
+				29FB3BC81EBBB93F0059FD11 /* Repository.swift */,
+				29FB3BC91EBBB93F0059FD11 /* ReviewComment.swift */,
+				29FB3BCA1EBBB93F0059FD11 /* Self_.swift */,
+				29FB3BCB1EBBB93F0059FD11 /* Status.swift */,
+				29FB3BCC1EBBB93F0059FD11 /* Subject.swift */,
+				29FB3BCD1EBBB93F0059FD11 /* User.swift */,
+			);
+			name = gen;
+			path = Samples/gen;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -163,11 +295,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2988704B1EB7952B00EDFA03 /* Build configuration list for PBXNativeTarget "BottleRocket" */;
 			buildPhases = (
-				42755E6461E3D541229CB845 /* [CP] Check Pods Manifest.lock */,
 				298870401EB7952B00EDFA03 /* Sources */,
 				298870411EB7952B00EDFA03 /* Frameworks */,
 				298870421EB7952B00EDFA03 /* CopyFiles */,
-				AB79392E398D0F86C0E3CBC8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,12 +312,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 298870741EB797D200EDFA03 /* Build configuration list for PBXNativeTarget "BottleRocketTests" */;
 			buildPhases = (
-				0185D79EFA9A33A21A909C81 /* [CP] Check Pods Manifest.lock */,
 				2988706B1EB797D200EDFA03 /* Sources */,
 				2988706C1EB797D200EDFA03 /* Frameworks */,
 				2988706D1EB797D200EDFA03 /* Resources */,
-				BB94DD36791F3939AB7BD6F2 /* [CP] Embed Pods Frameworks */,
-				0BDEF314623C1112360C6DC7 /* [CP] Copy Pods Resources */,
 				2988707D1EB7A79D00EDFA03 /* ShellScript */,
 			);
 			buildRules = (
@@ -250,36 +377,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0185D79EFA9A33A21A909C81 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		0BDEF314623C1112360C6DC7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BottleRocketTests/Pods-BottleRocketTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2988707D1EB7A79D00EDFA03 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,51 +390,6 @@
 			shellPath = /bin/sh;
 			shellScript = "find ${TARGET_BUILD_DIR} -type d -name \"*.framework\" -exec cp -Rf {} ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ \\;\n";
 		};
-		42755E6461E3D541229CB845 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		AB79392E398D0F86C0E3CBC8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BottleRocket/Pods-BottleRocket-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BB94DD36791F3939AB7BD6F2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BottleRocketTests/Pods-BottleRocketTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -345,13 +397,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29FB3BD11EBBB93F0059FD11 /* Html.swift in Sources */,
 				2988707F1EB7A9F300EDFA03 /* Node.swift in Sources */,
 				298870781EB797E700EDFA03 /* TypeName.swift in Sources */,
+				29FB3BD81EBBB93F0059FD11 /* Permission.swift in Sources */,
+				29FB396B1EBAD1860059FD11 /* CommandMessageGenerator.swift in Sources */,
+				29FB39791EBAD1860059FD11 /* VersionCommand.swift in Sources */,
+				29FB39761EBAD1860059FD11 /* Parameter.swift in Sources */,
+				29FB39671EBAD1860059FD11 /* ArgumentListManipulator.swift in Sources */,
+				29FB396E1EBAD1860059FD11 /* HelpCommand.swift in Sources */,
+				29FB397F1EBAD79A0059FD11 /* NSString+InflectorKit.m in Sources */,
 				29FB394E1EBACC170059FD11 /* Files.swift in Sources */,
+				29FB39711EBAD1860059FD11 /* Option.swift in Sources */,
+				29FB396D1EBAD1860059FD11 /* GlobalOptions.swift in Sources */,
+				29FB39691EBAD1860059FD11 /* CLI.swift in Sources */,
+				29FB39741EBAD1860059FD11 /* OptionRegistry.swift in Sources */,
+				29FB3BD31EBBB93F0059FD11 /* Label.swift in Sources */,
 				298870481EB7952B00EDFA03 /* main.swift in Sources */,
+				29FB3BD21EBBB93F0059FD11 /* Issue.swift in Sources */,
+				29FB39781EBAD1860059FD11 /* Router.swift in Sources */,
+				29FB3BDD1EBBB93F0059FD11 /* Self_.swift in Sources */,
+				29FB3BD71EBBB93F0059FD11 /* Organization.swift in Sources */,
+				29FB39721EBAD1860059FD11 /* OptionGroup.swift in Sources */,
+				29FB39681EBAD1860059FD11 /* ChainableCommand.swift in Sources */,
+				29FB3BD61EBBB93F0059FD11 /* Notification.swift in Sources */,
+				29FB39891EBB7F550059FD11 /* Config.swift in Sources */,
+				29FB39731EBAD1860059FD11 /* OptionRecognizer.swift in Sources */,
+				29FB3BD41EBBB93F0059FD11 /* Link.swift in Sources */,
+				29FB39751EBAD1860059FD11 /* Output.swift in Sources */,
+				29FB3BDB1EBBB93F0059FD11 /* Repository.swift in Sources */,
+				29FB3BDE1EBBB93F0059FD11 /* Status.swift in Sources */,
+				29FB39661EBAD1850059FD11 /* ArgumentList.swift in Sources */,
 				29E4400C1EBA215A00248779 /* Rendering.swift in Sources */,
+				29FB39801EBAD79A0059FD11 /* TTTStringInflector.m in Sources */,
+				29FB3BD91EBBB93F0059FD11 /* PullRequest.swift in Sources */,
+				29FB39701EBAD1860059FD11 /* LightweightCommand.swift in Sources */,
+				29FB3BD51EBBB93F0059FD11 /* Milestone.swift in Sources */,
+				29FB3BD01EBBB93F0059FD11 /* Commit.swift in Sources */,
+				29FB3BCE1EBBB93F0059FD11 /* Branch.swift in Sources */,
+				29FB3BDA1EBBB93F0059FD11 /* Reaction.swift in Sources */,
 				29E440151EBA780C00248779 /* Reduce.swift in Sources */,
+				29FB3BDF1EBBB93F0059FD11 /* Subject.swift in Sources */,
+				29FB3BE01EBBB93F0059FD11 /* User.swift in Sources */,
 				29DA08071EB829120098010A /* Parsing.swift in Sources */,
+				29FB3BCF1EBBB93F0059FD11 /* Comment.swift in Sources */,
+				29FB3BDC1EBBB93F0059FD11 /* ReviewComment.swift in Sources */,
+				29FB396F1EBAD1860059FD11 /* Input.swift in Sources */,
+				29FB39771EBAD1860059FD11 /* ParameterFiller.swift in Sources */,
+				29FB396C1EBAD1860059FD11 /* CommandSignature.swift in Sources */,
+				29FB396A1EBAD1860059FD11 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,16 +453,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29FB39861EBB71CC0059FD11 /* NSString+InflectorKit.m in Sources */,
 				29DA08081EB829BD0098010A /* Parsing.swift in Sources */,
 				2988707B1EB7A29200EDFA03 /* TypeName.swift in Sources */,
 				29E4400D1EBA215C00248779 /* Rendering.swift in Sources */,
 				2988707A1EB7A28600EDFA03 /* TypeNameTests.swift in Sources */,
 				29FB39501EBACDBE0059FD11 /* FilesTests.swift in Sources */,
+				29FB39851EBB717E0059FD11 /* Files.swift in Sources */,
 				29DA080B1EB82B640098010A /* ParsingTests.swift in Sources */,
 				29E440181EBA790200248779 /* Reduce.swift in Sources */,
 				29DA08091EB829F00098010A /* Node.swift in Sources */,
+				29FB39871EBB71CC0059FD11 /* TTTStringInflector.m in Sources */,
 				29E4400F1EBA4E5100248779 /* NodeTests.swift in Sources */,
 				29E440171EBA78F000248779 /* ReduceTests.swift in Sources */,
+				29FB398C1EBB80790059FD11 /* Config.swift in Sources */,
+				29FB398B1EBB7F580059FD11 /* ConfigTests.swift in Sources */,
 				29E440111EBA4E5900248779 /* RenderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,27 +568,26 @@
 		};
 		2988704C1EB7952B00EDFA03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D631F7D445745398249670A /* Pods-BottleRocket.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 523C4DWBTH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BottleRocket/BottleRocket-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2988704D1EB7952B00EDFA03 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E57222870CCDBADED6FB0AE /* Pods-BottleRocket.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 523C4DWBTH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BottleRocket/BottleRocket-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		298870751EB797D200EDFA03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF96E53452C763CAD333D754 /* Pods-BottleRocketTests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 523C4DWBTH;
@@ -498,13 +596,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryannystrom.BottleRocketTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "BottleRocket/BottleRocket-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		298870761EB797D200EDFA03 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0F16508FCE6E7F9C0A81276 /* Pods-BottleRocketTests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 523C4DWBTH;
@@ -512,6 +610,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryannystrom.BottleRocketTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BottleRocket/BottleRocket-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};

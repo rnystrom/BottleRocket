@@ -20,4 +20,29 @@ class TypeNameTests: XCTestCase {
         XCTAssertEqual(result, "User")
     }
 
+    func test_whenKeyUnderscore() {
+        let result = typeName(for: "_link")
+        XCTAssertEqual(result, "Link")
+    }
+
+    func test_whenKeyHyphen() {
+        let result = typeName(for: "url-link")
+        XCTAssertEqual(result, "UrlLink")
+    }
+
+    func test_whenCleaningKey_withBlacklistedWord() {
+        let result = cleanKey(for: "self")
+        XCTAssertEqual(result, "self_")
+    }
+
+    func test_whenCleaningKey_withNonAlphaBeginning() {
+        let result = cleanKey(for: "+1")
+        XCTAssertEqual(result, "plus1")
+    }
+
+    func test_whenCreatingClassName_withBlacklistedWord() {
+        let result = typeName(for: "self")
+        XCTAssertEqual(result, "Self_")
+    }
+
 }

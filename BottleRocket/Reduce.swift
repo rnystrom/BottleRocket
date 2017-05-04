@@ -30,11 +30,15 @@ func allObjects(nodes: [Node]) -> [Node] {
         case .object(_, _, let properties):
             flat.append(node)
             flat += allObjects(nodes: properties)
+        case .array(key: _, let subnode):
+            flat += allObjects(nodes: [subnode])
         default: break
         }
     }
     return flat
 }
+
+
 
 // scan all object nodes and return an array of properties with optionality discovered
 // node property is optional if it does not occur in every top-level node
@@ -42,13 +46,23 @@ func findOptionalNodes(nodes: [Node]) -> [OptionalNode] {
     let countedSet = NSCountedSet()
     var table = [String: Node]()
     for node in nodes {
+        let props: [Node]
         switch node {
-        case .object(_, _, let properties):
-            for prop in properties {
+        case .object(_, _, let properties): props = properties
+        case .array(_, let subnode) :
+            switch subnode {
+            case .object(_, _, let properties): props = properties
+            default: props = []
+            }
+        default: props = []
+        }
+        for prop in props {
+            switch prop {
+            case .unknown: break
+            default:
                 table[prop.key] = prop;
                 countedSet.add(prop.key)
             }
-        default: break
         }
     }
     var optionalNodes = [OptionalNode]()
@@ -60,14 +74,13 @@ func findOptionalNodes(nodes: [Node]) -> [OptionalNode] {
 }
 
 func buildClassMap(
-    nodes: [Node],
-    classMap: [String: String] = [:]
+    nodes: [Node]
     ) -> [String: [OptionalNode]] {
     let allObjectNodes = allObjects(nodes: nodes)
 
     var dupeMap = [String: [Node]]()
     for node in allObjectNodes {
-        let name = classMap[node.type] ?? node.type
+        let name = node.type
         var dupes = dupeMap[name] ?? [Node]()
         dupes.append(node)
         dupeMap[name] = dupes

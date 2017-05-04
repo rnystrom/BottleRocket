@@ -56,13 +56,13 @@ class RenderTests: XCTestCase {
 
     func test_whenRenderParsingArray_withObject_withNotOptional() {
         let node = Node.object(key: "key", type: "Type", properties: [])
-        let result = renderParsingArray(name: "name", node: node, optional: false)
+        let result = renderParsingArray(name: "names", node: node, optional: false)
         let expectation = [
-            "guard let nameJSON = json?[Keys.name] as? [ [String: Any] ] else { return nil }",
-            "var nameObjects = [Type]()",
-            "for dict in nameJSON {",
+            "guard let namesJSON = json?[Keys.names] as? [ [String: Any] ] else { return nil }",
+            "var names = [Type]()",
+            "for dict in namesJSON ?? [] {",
             "  if let object = Type(json: dict) {",
-            "    nameObjects(object)",
+            "    names.append(object)",
             "  }",
             "}",
         ]
@@ -72,7 +72,7 @@ class RenderTests: XCTestCase {
     func test_whenRenderInitCall_withMultipleNodes() {
         let nodes: [Node] = [
             Node.scalar(key: "scalar", type: "String", encodeType: .object),
-            Node.array(key: "array", node: Node.scalar(key: "nested", type: "Int", encodeType: .integer)),
+            Node.array(key: "array", node: Node.scalar(key: "nested", type: "NSNumber", encodeType: .object)),
             Node.object(key: "object", type: "MyObject", properties: []),
             ]
         let result = renderInitCall(nodes: nodes)
@@ -91,8 +91,13 @@ class RenderTests: XCTestCase {
         XCTAssertEqual(result, "let name = aDecoder.decodeObject(forKey: Keys.name) as? Type")
     }
 
-    func test_whenRenderDecodeNode_withoutCast() {
+    func test_whenRenderDecodeNode_withoutCast_withOptional() {
         let result = renderDecode(name: "name", encodeType: .bool, type: "Bool", optional: true)
+        XCTAssertEqual(result, "let name = aDecoder.decodeBool(forKey: Keys.name)")
+    }
+
+    func test_whenRenderDecodeNode_withoutCast_withNotOptional() {
+        let result = renderDecode(name: "name", encodeType: .bool, type: "Bool", optional: false)
         XCTAssertEqual(result, "let name = aDecoder.decodeBool(forKey: Keys.name)")
     }
 
@@ -103,14 +108,14 @@ class RenderTests: XCTestCase {
 
     func test_whenRenderInitDecode() {
         let optionalNodes: [OptionalNode] = [
-            (Node.scalar(key: "scalar", type: "Int", encodeType: .integer), true),
+            (Node.scalar(key: "scalar", type: "NSNumber", encodeType: .object), true),
             (Node.array(key: "array", node: Node.scalar(key: "nested", type: "String", encodeType: .object)), false),
             (Node.object(key: "object", type: "MyObject", properties: []), true),
             ]
         let result = renderInitDecode(optionalNodes: optionalNodes)
         let expectation = [
             "convenience init?(coder aDecoder: NSCoder) {",
-            "  let scalar = aDecoder.decodeInteger(forKey: Keys.scalar)",
+            "  let scalar = aDecoder.decodeObject(forKey: Keys.scalar) as? NSNumber",
             "  guard let array = aDecoder.decodeObject(forKey: Keys.array) as? [String] else { return nil }",
             "  let object = aDecoder.decodeObject(forKey: Keys.object) as? MyObject",
             "  self.init(",
@@ -125,8 +130,8 @@ class RenderTests: XCTestCase {
 
     func test_whenRenderEncode() {
         let nodes = [
-            Node.scalar(key: "scalar", type: "Int", encodeType: .integer),
-            Node.array(key: "array", node: Node.scalar(key: "nested", type: "Int", encodeType: .integer)),
+            Node.scalar(key: "scalar", type: "NSNumber", encodeType: .object),
+            Node.array(key: "array", node: Node.scalar(key: "nested", type: "NSNumber", encodeType: .object)),
             Node.object(key: "object", type: "MyObject", properties: []),
             ]
         let result = renderEncode(nodes: nodes)
@@ -142,8 +147,8 @@ class RenderTests: XCTestCase {
 
     func test_whenRenderKeys() {
         let nodes = [
-            Node.scalar(key: "scalar", type: "Int", encodeType: .integer),
-            Node.array(key: "array", node: Node.scalar(key: "nested", type: "Int", encodeType: .integer)),
+            Node.scalar(key: "scalar", type: "NSNumber", encodeType: .object),
+            Node.array(key: "array", node: Node.scalar(key: "nested", type: "NSNumber", encodeType: .object)),
             Node.object(key: "object", type: "MyObject", properties: []),
             ]
         let result = renderKeys(nodes: nodes)
@@ -159,13 +164,13 @@ class RenderTests: XCTestCase {
 
     func test_whenRenderingInitializer() {
         let optionalNodes: [OptionalNode] = [
-            (Node.scalar(key: "scalar", type: "Int", encodeType: .integer), true),
+            (Node.scalar(key: "scalar", type: "NSNumber", encodeType: .object), true),
             (Node.array(key: "array", node: Node.scalar(key: "nested", type: "String", encodeType: .object)), false),
             ]
         let result = renderInitializer(optionalNodes: optionalNodes)
         let expectation = [
             "init(",
-            "  scalar: Int?,",
+            "  scalar: NSNumber?,",
             "  array: [String]",
             "  ) {",
             "  self.scalar = scalar",
@@ -177,13 +182,13 @@ class RenderTests: XCTestCase {
 
     func test_whenRenderingProperties() {
         let optionalNodes: [OptionalNode] = [
-            (Node.scalar(key: "scalar", type: "Int", encodeType: .integer), true),
+            (Node.scalar(key: "scalar", type: "NSNumber", encodeType: .object), true),
             (Node.array(key: "array", node: Node.scalar(key: "nested", type: "String", encodeType: .object)), false),
             (Node.object(key: "object", type: "MyObject", properties: []), true),
             ]
         let result = renderProperties(optionalNodes: optionalNodes)
         let expectation = [
-            "let scalar: Int?",
+            "let scalar: NSNumber?",
             "let array: [String]",
             "let object: MyObject?"
         ]
@@ -192,7 +197,7 @@ class RenderTests: XCTestCase {
 
     func test_whenRenderingClass() {
         let optionalNodes: [OptionalNode] = [
-            (Node.scalar(key: "scalar", type: "Int", encodeType: .integer), true),
+            (Node.scalar(key: "scalar", type: "NSNumber", encodeType: .object), true),
             (Node.array(key: "array", node: Node.scalar(key: "nested", type: "String", encodeType: .object)), false),
             (Node.object(key: "object", type: "MyObject", properties: []), true),
             ]

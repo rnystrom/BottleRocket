@@ -11,10 +11,8 @@ import Foundation
 public indirect enum Node {
 
     public enum EncodeType: String {
+        // used by custom objects, NSNumber, String, and Array
         case object = "Object"
-        case string = "String"
-        case integer = "Integer"
-        case double = "Double"
         case bool = "Bool"
     }
 

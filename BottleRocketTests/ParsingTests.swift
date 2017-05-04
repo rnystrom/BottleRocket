@@ -10,7 +10,7 @@ import XCTest
 
 class ParseNodeTests: XCTestCase {
 
-    func test_whenParsingBool_withTrueValue_thatResultCorrect() {
+    func test_whenParsingBool_withTrueValue() {
         let root = parseNode(key: "root", value: true)
         switch root {
         case .scalar(let key, let type, _):
@@ -20,7 +20,7 @@ class ParseNodeTests: XCTestCase {
         }
     }
 
-    func test_whenParsingBool_withFalseValue_thatResultCorrect() {
+    func test_whenParsingBool_withFalseValue() {
         let root = parseNode(key: "root", value: false)
         switch root {
         case .scalar(let key, let type, _):
@@ -30,37 +30,37 @@ class ParseNodeTests: XCTestCase {
         }
     }
 
-    func test_whenParsingInt_thatResultCorrect() {
+    func test_whenParsingInt() {
         let root = parseNode(key: "root", value: 1)
         switch root {
         case .scalar(let key, let type, _):
             XCTAssertEqual(key, "root")
-            XCTAssertEqual(type, "Int")
+            XCTAssertEqual(type, "NSNumber")
         default: XCTFail()
         }
     }
 
-    func test_whenParsingDouble_withFractionValue_thatResultCorrect() {
+    func test_whenParsingDouble_withFractionValue() {
         let root = parseNode(key: "root", value: 1.1)
         switch root {
         case .scalar(let key, let type, _):
             XCTAssertEqual(key, "root")
-            XCTAssertEqual(type, "Double")
+            XCTAssertEqual(type, "NSNumber")
         default: XCTFail()
         }
     }
 
-    func test_whenParsingDouble_withFloorValue_thatResultCorrect() {
+    func test_whenParsingDouble_withFloorValue() {
         let root = parseNode(key: "root", value: 1.0)
         switch root {
         case .scalar(let key, let type, _):
             XCTAssertEqual(key, "root")
-            XCTAssertEqual(type, "Double")
+            XCTAssertEqual(type, "NSNumber")
         default: XCTFail()
         }
     }
 
-    func test_whenParsingString_thatResultCorrect() {
+    func test_whenParsingString() {
         let root = parseNode(key: "root", value: "foo")
         switch root {
         case .scalar(let key, let type, _):
@@ -70,7 +70,7 @@ class ParseNodeTests: XCTestCase {
         }
     }
 
-    func test_whenParsingNestedJSON_thatResultCorrect() {
+    func test_whenParsingNestedJSON() {
         let root = parseNode(key: "root", value: ["foo": "bar"])
         switch root {
         case .object(let key, _, let properties):
@@ -86,33 +86,33 @@ class ParseNodeTests: XCTestCase {
         }
     }
 
-    func test_whenParsingArray_withInts_thatResultCorrect() {
+    func test_whenParsingArray_withInts() {
         let root = parseNode(key: "roots", value: [1])
         switch root {
         case .array(let key, let obj):
             XCTAssertEqual(key, "roots")
             switch obj {
-            case .scalar(_, let type, _): XCTAssertEqual(type, "Int")
+            case .scalar(_, let type, _): XCTAssertEqual(type, "NSNumber")
             default: XCTFail()
             }
         default: XCTFail()
         }
     }
 
-    func test_whenParsingArray_withDoubles_thatResultCorrect() {
+    func test_whenParsingArray_withDoubles() {
         let root = parseNode(key: "roots", value: [1.0])
         switch root {
         case .array(let key, let obj):
             XCTAssertEqual(key, "roots")
             switch obj {
-            case .scalar(_, let type, _): XCTAssertEqual(type, "Double")
+            case .scalar(_, let type, _): XCTAssertEqual(type, "NSNumber")
             default: XCTFail()
             }
         default: XCTFail()
         }
     }
 
-    func test_whenParsingArray_withStrings_thatResultCorrect() {
+    func test_whenParsingArray_withStrings() {
         let root = parseNode(key: "roots", value: ["foo"])
         switch root {
         case .array(let key, let obj):
@@ -125,7 +125,7 @@ class ParseNodeTests: XCTestCase {
         }
     }
 
-    func test_whenParsingArray_withBools_thatResultCorrect() {
+    func test_whenParsingArray_withBools() {
         let root = parseNode(key: "roots", value: [true])
         switch root {
         case .array(let key, let obj):
@@ -138,7 +138,7 @@ class ParseNodeTests: XCTestCase {
         }
     }
 
-    func test_whenParsingArray_withNestedJSON_thatResultCorrect() {
+    func test_whenParsingArray_withNestedJSON() {
         let root = parseNode(key: "roots", value: [ ["foo": "bar"] ])
         switch root {
         case .array(let key, let obj):
@@ -155,6 +155,24 @@ class ParseNodeTests: XCTestCase {
                 }
             default: XCTFail()
             }
+        default: XCTFail()
+        }
+    }
+
+    func test_whenParsingObject_withRename() {
+        let root = parseNodeObject(key: "root", dict: ["foo": "bar"], renameMap: ["root": "baz"])
+        switch root {
+        case .object(let key, let type, _):
+            XCTAssertEqual(key, "root")
+            XCTAssertEqual(type, "Baz")
+        default: XCTFail()
+        }
+    }
+
+    func test_whenParsingInteger_withZeroValue() {
+        let root = parseNode(key: "int", value: 0)
+        switch root {
+        case .scalar(_, let type, _): XCTAssertEqual(type, "NSNumber")
         default: XCTFail()
         }
     }

@@ -10,14 +10,14 @@ import Foundation
 
 func jsonFiles(
     path: String
-    ) -> (jsonFiles: [String], mapFile: String?) {
+    ) -> (jsonFiles: [String], config: String?) {
     let fileManager = FileManager.default
     let enumerator = fileManager.enumerator(atPath: path)
     var jsonFiles = [String]()
     var mapFile: String?
     while let element = enumerator?.nextObject() as? String {
         if element.hasSuffix("json") {
-            if element == ".classMap.json" {
+            if element == ".config.json" {
                 mapFile = path + "/" + element
             } else {
                 jsonFiles.append(path + "/" + element)
@@ -53,4 +53,30 @@ func loadJSONFiles(files: [String]) -> [ String: [String: Any] ] {
         }
     }
     return fileModels
+}
+
+func writeToFile(
+    name: String,
+    content: String,
+    path: String
+    ) throws {
+    let filename = path.appendingFormat("%@", (name + ".swift"))
+    try FileManager.default.createDirectory(at: URL.init(fileURLWithPath: path),
+                                            withIntermediateDirectories: true,
+                                            attributes: nil)
+    try content.write(toFile: filename, atomically: true, encoding: String.Encoding.utf8)
+}
+
+func generatePathToSave(fromBasePath: String, destinationPath: String) -> String {
+    let fullDestination = (destinationPath as NSString).expandingTildeInPath
+    let suffixedDestination = fullDestination.hasSuffix("/") ? fullDestination : fullDestination + "/"
+
+    // if given an absolute destination, don't append with the base
+    if suffixedDestination.hasPrefix("/") {
+        return suffixedDestination
+    }
+
+    let fullBase = (fromBasePath as NSString).expandingTildeInPath
+    let dirBase = fullBase.hasSuffix("/") ? fullBase : fullBase + "/"
+    return dirBase + suffixedDestination
 }
