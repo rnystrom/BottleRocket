@@ -23,6 +23,8 @@
 		29E440151EBA780C00248779 /* Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E440141EBA780C00248779 /* Reduce.swift */; };
 		29E440171EBA78F000248779 /* ReduceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E440161EBA78F000248779 /* ReduceTests.swift */; };
 		29E440181EBA790200248779 /* Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E440141EBA780C00248779 /* Reduce.swift */; };
+		29FB394E1EBACC170059FD11 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB394D1EBACC170059FD11 /* Files.swift */; };
+		29FB39501EBACDBE0059FD11 /* FilesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB394F1EBACDBE0059FD11 /* FilesTests.swift */; };
 		775F27C9033CD0F80F4D82AE /* Pods_BottleRocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5C2233CBC33F615D248440 /* Pods_BottleRocketTests.framework */; };
 		BC7DD991B72CAF2098630B31 /* Pods_BottleRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EC4AAC8FB506E1BBCD942A /* Pods_BottleRocket.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,8 @@
 		29E440101EBA4E5900248779 /* RenderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderTests.swift; sourceTree = "<group>"; };
 		29E440141EBA780C00248779 /* Reduce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reduce.swift; sourceTree = "<group>"; };
 		29E440161EBA78F000248779 /* ReduceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduceTests.swift; sourceTree = "<group>"; };
+		29FB394D1EBACC170059FD11 /* Files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		29FB394F1EBACDBE0059FD11 /* FilesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesTests.swift; sourceTree = "<group>"; };
 		2F5C2233CBC33F615D248440 /* Pods_BottleRocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottleRocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D631F7D445745398249670A /* Pods-BottleRocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottleRocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BottleRocket/Pods-BottleRocket.debug.xcconfig"; sourceTree = "<group>"; };
 		56EC4AAC8FB506E1BBCD942A /* Pods_BottleRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottleRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +117,7 @@
 				29E4400B1EBA215A00248779 /* Rendering.swift */,
 				29DA08061EB829120098010A /* Parsing.swift */,
 				29E440141EBA780C00248779 /* Reduce.swift */,
+				29FB394D1EBACC170059FD11 /* Files.swift */,
 			);
 			path = BottleRocket;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				29E440101EBA4E5900248779 /* RenderTests.swift */,
 				29E440161EBA78F000248779 /* ReduceTests.swift */,
 				298870731EB797D200EDFA03 /* Info.plist */,
+				29FB394F1EBACDBE0059FD11 /* FilesTests.swift */,
 			);
 			path = BottleRocketTests;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 			files = (
 				2988707F1EB7A9F300EDFA03 /* Node.swift in Sources */,
 				298870781EB797E700EDFA03 /* TypeName.swift in Sources */,
+				29FB394E1EBACC170059FD11 /* Files.swift in Sources */,
 				298870481EB7952B00EDFA03 /* main.swift in Sources */,
 				29E4400C1EBA215A00248779 /* Rendering.swift in Sources */,
 				29E440151EBA780C00248779 /* Reduce.swift in Sources */,
@@ -356,6 +363,7 @@
 				2988707B1EB7A29200EDFA03 /* TypeName.swift in Sources */,
 				29E4400D1EBA215C00248779 /* Rendering.swift in Sources */,
 				2988707A1EB7A28600EDFA03 /* TypeNameTests.swift in Sources */,
+				29FB39501EBACDBE0059FD11 /* FilesTests.swift in Sources */,
 				29DA080B1EB82B640098010A /* ParsingTests.swift in Sources */,
 				29E440181EBA790200248779 /* Reduce.swift in Sources */,
 				29DA08091EB829F00098010A /* Node.swift in Sources */,
