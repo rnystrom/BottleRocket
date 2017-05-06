@@ -68,7 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		298870441EB7952B00EDFA03 /* BottleRocket */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BottleRocket; sourceTree = BUILT_PRODUCTS_DIR; };
+		298870441EB7952B00EDFA03 /* bottlerocket */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bottlerocket; sourceTree = BUILT_PRODUCTS_DIR; };
 		298870471EB7952B00EDFA03 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2988706F1EB797D200EDFA03 /* BottleRocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BottleRocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		298870731EB797D200EDFA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		298870451EB7952B00EDFA03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				298870441EB7952B00EDFA03 /* BottleRocket */,
+				298870441EB7952B00EDFA03 /* bottlerocket */,
 				2988706F1EB797D200EDFA03 /* BottleRocketTests.xctest */,
 			);
 			name = Products;
@@ -237,7 +237,7 @@
 			);
 			name = BottleRocket;
 			productName = BottleRocket;
-			productReference = 298870441EB7952B00EDFA03 /* BottleRocket */;
+			productReference = 298870441EB7952B00EDFA03 /* bottlerocket */;
 			productType = "com.apple.product-type.tool";
 		};
 		2988706E1EB797D200EDFA03 /* BottleRocketTests */ = {
@@ -483,7 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 523C4DWBTH;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bottlerocket;
 				SWIFT_OBJC_BRIDGING_HEADER = "BottleRocket/BottleRocket-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -493,7 +493,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 523C4DWBTH;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bottlerocket;
 				SWIFT_OBJC_BRIDGING_HEADER = "BottleRocket/BottleRocket-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

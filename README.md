@@ -10,6 +10,16 @@ An experimental utility for generating noramlized Swift models from example JSON
 - Generated Swift JSON parsing code without dependencies
 - Experiment with functional programming techniques in Swift
 
+## Installation
+
+Don't have a good way to do this yet. For now:
+
+- Download project
+- Open `BottleRocket.xcodeproj`
+- Build
+- Expand the Products group, option-click `BottleRocket` and select `Show in Finder`
+- Put the executable somewhere
+
 ## Example
 
 Suppose you have two different endpoints that return JSON:
@@ -48,7 +58,7 @@ Suppose you have two different endpoints that return JSON:
 You can save both sample responses into two files: `events.json` and `user.json`. Then run:
 
 ```shell
-bottlerocket gen ~/path/to/models
+$ bottlerocket gen ~/path/to/models
 ```
 
 Which then generates two different models:
