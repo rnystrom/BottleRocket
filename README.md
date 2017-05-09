@@ -1,6 +1,6 @@
 # BottleRocket
 
-An experimental utility for generating noramlized Swift models from example JSON responses.
+An experimental CLI tool for generating normalized Swift models from example JSON responses.
 
 ## Goals
 
