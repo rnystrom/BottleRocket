@@ -12,13 +12,10 @@ An experimental CLI tool for generating normalized Swift models from example JSO
 
 ## Installation
 
-Don't have a good way to do this yet. For now:
-
 - Download project
 - Open `BottleRocket.xcodeproj`
 - Build
-- Expand the Products group, option-click `BottleRocket` and select `Show in Finder`
-- Put the executable somewhere
+- Should be installed in `/usr/local/bin`
 
 ## Example
 
