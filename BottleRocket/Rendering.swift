@@ -240,7 +240,7 @@ func renderClass(
     let encode = -->renderEncode(nodes: nodes)
 
     var result = [String]()
-    result.append("final class \(name): NSCoding {")
+    result.append("final class \(name): NSObject, NSCoding {")
     result.append(contentsOf: keys)
     result.append(contentsOf: properties)
     result.append(contentsOf: initJSON)
