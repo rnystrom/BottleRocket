@@ -30,6 +30,7 @@ func cleanKey(for key: String) -> String {
         "guard",
         "private",
         "default",
+        "description",
     ]
 
     for word in blacklistedWords {

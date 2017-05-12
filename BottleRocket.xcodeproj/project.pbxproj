@@ -154,8 +154,8 @@
 		298870461EB7952B00EDFA03 /* BottleRocket */ = {
 			isa = PBXGroup;
 			children = (
-				29FB39881EBB7F550059FD11 /* Config.swift */,
 				29FB39841EBAD8240059FD11 /* BottleRocket-Bridging-Header.h */,
+				29FB39881EBB7F550059FD11 /* Config.swift */,
 				29FB394D1EBACC170059FD11 /* Files.swift */,
 				29FB397A1EBAD7990059FD11 /* InflectorKit */,
 				298870471EB7952B00EDFA03 /* main.swift */,
