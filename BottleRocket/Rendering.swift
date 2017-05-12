@@ -240,6 +240,7 @@ func renderClass(
     let encode = -->renderEncode(nodes: nodes)
 
     var result = [String]()
+    result.append("import Foundation")
     result.append("final class \(name): NSObject, NSCoding {")
     result.append(contentsOf: keys)
     result.append(contentsOf: properties)
