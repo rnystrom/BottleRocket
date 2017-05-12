@@ -12,6 +12,7 @@
 		2988707A1EB7A28600EDFA03 /* TypeNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298870791EB7A28600EDFA03 /* TypeNameTests.swift */; };
 		2988707B1EB7A29200EDFA03 /* TypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298870771EB797E700EDFA03 /* TypeName.swift */; };
 		2988707F1EB7A9F300EDFA03 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2988707E1EB7A9F300EDFA03 /* Node.swift */; };
+		29C9FDB01EC65A8C00EE3A52 /* bottlerocket in CopyFiles */ = {isa = PBXBuildFile; fileRef = 298870441EB7952B00EDFA03 /* bottlerocket */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		29DA08071EB829120098010A /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA08061EB829120098010A /* Parsing.swift */; };
 		29DA08081EB829BD0098010A /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA08061EB829120098010A /* Parsing.swift */; };
 		29DA08091EB829F00098010A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2988707E1EB7A9F300EDFA03 /* Node.swift */; };
@@ -58,12 +59,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		298870421EB7952B00EDFA03 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = usr/share/man/man1;
-			dstSubfolderSpec = 10;
+			buildActionMask = 12;
+			dstPath = /usr/local/bin;
+			dstSubfolderSpec = 0;
 			files = (
+				29C9FDB01EC65A8C00EE3A52 /* bottlerocket in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
